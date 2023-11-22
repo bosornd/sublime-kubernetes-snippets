@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+command:
+  - /bin/sh
+  - -c
+  - ${1:command}
+]]></content>
+  <tabTrigger>kubernetes:command</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Pod Command</description>
+</snippet>

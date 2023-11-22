@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+volumes:
+- name: ${1:name}
+  persistentVolumeClaim:
+    claimName: ${2:claimName}
+]]></content>
+  <tabTrigger>kubernetes:volumes</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Pod Volumes</description>
+</snippet>

@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: ${1:name}
+spec:
+  replicas: 1
+  persistence:
+    storage: 1Mi
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 200m
+      memory: 1Gi
+  rabbitmq:
+    envConfig: |
+      RABBITMQ_DEFAULT_USER=${2:username}
+      RABBITMQ_DEFAULT_PASS=${3:password}
+]]></content>
+  <tabTrigger>kubernetes:rmq</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes RabbitMQ Cluster</description>
+</snippet>

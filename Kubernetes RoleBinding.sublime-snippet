@@ -3,18 +3,17 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: ${1:role-name}
-  namespace: ${2:default}
+  name: ${1:name}
 subjects:
 - kind: User
-  name: ${3:user-name}
+  name: ${2:user}
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
-  name: ${4:role-ref}
+  name: ${3:role}
   apiGroup: rbac.authorization.k8s.io
 ]]></content>
-  <tabTrigger>k8s:rolebinding</tabTrigger>
+  <tabTrigger>kubernetes:rolebinding</tabTrigger>
   <scope>source.yaml</scope>
   <description>Kubernetes RoleBinding</description>
 </snippet>

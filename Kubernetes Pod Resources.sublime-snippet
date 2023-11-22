@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+resources:
+  requests:
+    cpu: 100m
+    memory: 100Mi
+  limits:
+    cpu: 200m
+    memory: 1Gi
+]]></content>
+  <tabTrigger>kubernetes:resources</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Pod Resources</description>
+</snippet>

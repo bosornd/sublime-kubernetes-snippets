@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+readinessProbe:
+  httpGet:
+    path: /ready
+    port: 80
+  initialDelaySeconds: 5
+  periodSeconds: 5
+]]></content>
+  <tabTrigger>kubernetes:readinessProbe</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Pod Readiness Probe</description>
+</snippet>

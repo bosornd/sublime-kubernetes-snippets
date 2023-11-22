@@ -1,11 +1,12 @@
 <snippet>
   <content><![CDATA[
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: ${1:name}
 spec:
   replicas: 1
+  serviceName: $1
   selector:
     matchLabels:
       app: $1
@@ -20,8 +21,20 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: ${3:port}
+        volumeMounts:
+        - name: ${4:data}
+          mountPath: ${5:/data}
+  volumeClaimTemplates:
+  - metadata:
+      name: $4
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 1Gi
 ]]></content>
-  <tabTrigger>kubernetes:deploy</tabTrigger>
+  <tabTrigger>kubernetes:sts</tabTrigger>
   <scope>source.yaml</scope>
-  <description>Kubernetes Deployment</description>
+  <description>Kubernetes StatefulSet</description>
 </snippet>

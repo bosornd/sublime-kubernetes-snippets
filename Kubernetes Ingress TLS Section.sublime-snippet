@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[
 tls:
-- secretName: ${2:$1.tls}
-  hosts:
+- hosts:
   - ${1:host}
+  secretName: ${2:$1-tls}
 ]]></content>
-  <tabTrigger>k8s:ing-tls</tabTrigger>
+  <tabTrigger>kubernetes:tls</tabTrigger>
   <scope>source.yaml</scope>
   <description>Kubernetes Ingress TLS Section</description>
 </snippet>

@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ${1:name}
+spec:
+  schedule: "${2:* * * * *}"
+  jobTemplate:
+    spec:
+      completions: 1
+      parallelism: 1
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+          - name: $1
+            image: ${3:image}
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - ${4:command}
+]]></content>
+  <tabTrigger>kubernetes:cj</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Job</description>
+</snippet>

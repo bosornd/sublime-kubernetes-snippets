@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+hostPath:
+  path: ${1:path}
+]]></content>
+  <tabTrigger>kubernetes:hostPath</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes HostPath Volume</description>
+</snippet>

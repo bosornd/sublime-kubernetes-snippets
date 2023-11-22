@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+gitRepo:
+  repository: ${1:repository}
+  directory: .
+]]></content>
+  <tabTrigger>kubernetes:gitRepo</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes GitRepo Volume</description>
+</snippet>

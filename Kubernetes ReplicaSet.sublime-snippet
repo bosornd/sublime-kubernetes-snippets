@@ -1,13 +1,14 @@
 <snipet>
   <content><![CDATA[
 apiVersion: apps/v1
-kind: ReplicationController
+kind: ReplicaSet
 metadata:
   name: ${1:name}
 spec:
   replicas: 1
   selector:
-    app: $1
+    matchLabels:
+      app: $1
   template:
     metadata:
       labels:
@@ -21,7 +22,7 @@ spec:
         - containerPort: ${3:port}
   ]]>
   </content>
-  <tabTrigger>kubernetes:rc</tabTrigger>
+  <tabTrigger>kubernetes:rs</tabTrigger>
   <scope>source.yaml</scope>
-  <description>Kubernetes ReplicationController</description>
+  <description>Kubernetes ReplicaSet</description>
 </snipet>

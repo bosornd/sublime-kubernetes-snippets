@@ -1,23 +1,25 @@
 <snippet>
   <content><![CDATA[
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ${1}
+  name: ${1:name}
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
-  ${2:tls:
-  - secretName: ${3:secret}}
   rules:
   - http:
-    paths:
-    - path: ${4:/}
-      backend:
-        serviceName: ${5:service}
-        servicePort: ${6:80}
+      paths:
+      - path: ${2:/}
+        pathType: Prefix
+        backend:
+          service:
+            name: ${3:service}
+            port:
+              number: ${4:port}
 ]]></content>
-  <tabTrigger>k8s:ing</tabTrigger>
+  <tabTrigger>kubernetes:ing</tabTrigger>
   <scope>source.yaml</scope>
   <description>Kubernetes Ingress</description>
 </snippet>

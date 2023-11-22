@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+volumeMounts:
+- name: ${1:name}
+  mountPath: ${2:mountPath}
+]]></content>
+  <tabTrigger>kubernetes:volumeMounts</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Pod Volume Mounts</description>
+</snippet>

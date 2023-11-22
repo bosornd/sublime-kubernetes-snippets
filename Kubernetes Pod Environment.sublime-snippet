@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+volumeMounts:
+env:
+- name: ${1:name}
+  valueFrom:
+    configMapKeyRef:
+      name: ${2:config}
+      key: ${3:key}
+]]></content>
+  <tabTrigger>kubernetes:env</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Pod Environment</description>
+</snippet>

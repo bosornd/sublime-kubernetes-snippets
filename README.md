@@ -2,7 +2,7 @@
 
 ## Install
 
-```bash
-cd ~/Library/ApplicationSupport/Sublime\ Text\ 3/Packages/User
-git clone https://github.com/songjiz/sublime-kubernetes-snippets
+```
+cd %appdata%\Sublime Text\Packages\User
+git clone https://github.com/bosornd/sublime-kubernetes-snippets
 ```
