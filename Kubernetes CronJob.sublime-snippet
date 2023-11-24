@@ -8,6 +8,7 @@ spec:
   schedule: "${2:* * * * *}"
   jobTemplate:
     spec:
+      ttlSecondsAfterFinished: 100
       completions: 1
       parallelism: 1
       template:

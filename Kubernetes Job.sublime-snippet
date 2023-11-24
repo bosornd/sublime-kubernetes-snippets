@@ -5,6 +5,7 @@ kind: Job
 metadata:
   name: ${1:name}
 spec:
+  ttlSecondsAfterFinished: 100
   completions: 1
   parallelism: 1
   template:
