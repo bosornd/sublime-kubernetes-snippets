@@ -1,6 +1,5 @@
 <snippet>
   <content><![CDATA[
-volumeMounts:
 env:
 - name: ${1:name}
   valueFrom:
