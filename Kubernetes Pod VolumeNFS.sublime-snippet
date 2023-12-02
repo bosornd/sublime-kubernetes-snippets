@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+nfs:
+  server: ${1:nfs}
+  path: /
+  readOnly: false
+]]></content>
+  <tabTrigger>kubernetes:nfs</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes NFS Volume</description>
+</snippet>
